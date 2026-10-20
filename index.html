@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Pembelajaran PjBL - Informatika Kelas 8</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0fdfa; /* Light teal background */
+        }
+        .step-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .step-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Custom scrollbar for tables */
+        .table-container {
+            overflow-x: auto;
+        }
+        input, textarea {
+            transition: border-color 0.3s;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #0d9488;
+            box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.2);
+        }
+    </style>
+</head>
+<body class="text-gray-800 min-h-screen pb-12">
+
+    <nav class="bg-teal-600 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="font-bold text-xl flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Informatika Kelas 8
+            </div>
+            <div id="progress-indicator" class="text-sm font-semibold bg-teal-800 px-3 py-1 rounded-full">
+                Beranda
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-4 mt-8">
+        
+        <!-- BERANDA -->
+        <section id="step-0" class="step-content active">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="bg-gradient-to-r from-teal-500 to-emerald-500 p-8 text-center text-white">
+                    <h1 class="text-4xl font-extrabold mb-4">Proyek Microsoft PowerPoint: Hyperlink</h1>
+                    <p class="text-lg opacity-90 max-w-2xl mx-auto">Membuat Menu Interaktif "Hanutzy Café" menggunakan fitur Hyperlink melalui pendekatan Project Based Learning.</p>
+                </div>
+                <div class="p-8 text-center">
+                    <h2 class="text-2xl font-bold mb-4 text-teal-700">Tujuan Pembelajaran</h2>
+                    <p class="mb-8 text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                        Setelah mengikuti pembelajaran ini, kalian diharapkan mampu memahami dan menggunakan fitur <strong>Hyperlink</strong> pada Microsoft PowerPoint untuk menghubungkan antar slide, serta membuat presentasi interaktif yang menarik.
+                    </p>
+                    <button onclick="goToStep(1)" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition hover:scale-105">
+                        Mulai Belajar Sekarang 🚀
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAHAP 1 -->
+        <section id="step-1" class="step-content">
+            <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+                <div class="flex items-center gap-3 mb-6 border-b pb-4">
+                    <span class="bg-teal-100 text-teal-800 text-xl font-bold px-4 py-2 rounded-lg">B.1</span>
+                    <h2 class="text-2xl font-bold text-gray-800">Pertanyaan Mendasar</h2>
+                </div>
+                
+                <p class="mb-4">Perhatikan beberapa contoh pengetikan <strong>"Daftar Menu Hanutzy Café"</strong> dengan menggunakan Microsoft PowerPoint mulai Contoh 1-6 berikut. Desain bisa dikreasikan sendiri agar lebih menarik.</p>
+
+                <!-- Gallery Contoh Menu (Dibuat Ulang Menggunakan CSS) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                    
+                    <!-- Contoh 1: Menu Utama -->
+                    <div class="border shadow-md rounded-lg p-3 bg-gray-50 flex flex-col transition hover:shadow-lg">
+                        <p class="text-sm font-bold text-center mb-2 text-teal-700">Contoh 1: Menu Utama</p>
+                        <div class="aspect-video bg-gradient-to-r from-blue-400 via-yellow-200 to-pink-400 rounded border border-gray-300 p-4 flex flex-col relative text-xs">
+                            <div class="bg-pink-200/80 mx-auto px-4 py-1 border border-pink-400 shadow-sm mb-2">
+                                <span class="font-bold text-lg text-gray-700 tracking-widest drop-shadow">DAFTAR MENU</span>
+                            </div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <h2 class="text-xl font-black text-gray-800 drop-shadow-md">Hanutzy Cafe</h2>
+                                <div class="bg-black text-white text-xs px-2 py-1 flex items-center justify-center rounded">🏠</div>
+                            </div>
+                            <div class="flex justify-between font-bold text-gray-800 w-full px-2">
+                                <div class="w-1/2 pr-2">
+                                    <p class="mb-1 text-[11px]">MAKANAN :</p>
+                                    <div class="flex items-center justify-between gap-2 mb-1"><span>🍜 Mie</span> <div class="w-8 h-4 bg-blue-500 rounded border border-blue-700 shadow flex items-center justify-center text-white text-[8px] cursor-pointer">◀</div></div>
+                                    <div class="flex items-center justify-between gap-2 mb-1"><span>🍱 Paket</span> <div class="w-8 h-4 bg-blue-500 rounded border border-blue-700 shadow flex items-center justify-center text-white text-[8px] cursor-pointer">◀</div></div>
+                                </div>
+                                <div class="w-1/2 pl-2">
+                                    <p class="mb-1 text-[11px]">MINUMAN :</p>
+                                    <div class="flex items-center justify-between gap-2 mb-1"><span>🍹 Juice</span> <div class="w-8 h-4 bg-blue-500 rounded border border-blue-700 shadow flex items-center justify-center text-white text-[8px] cursor-pointer">◀</div></div>
+                                    <div class="flex items-center justify-between gap-2 mb-1"><span>🧊 Minuman Dingin</span> <div class="w-8 h-4 bg-blue-500 rounded border border-blue-700 shadow flex items-center justify-center text-white text-[8px] cursor-pointer">◀</div></div>
+                                    <div class="flex items-center justify-between gap-2 mb-1"><span>☕ Minuman Panas</span> <div class="w-8 h-4 bg-blue-500 rounded border border-blue-700 shadow flex items-center justify-center text-white text-[8px] cursor-pointer">◀</div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contoh 2: Makanan (Mie) -->
+                    <div class="border shadow-md rounded-lg p-3 bg-gray-50 flex flex-col transition hover:shadow-lg">
+                        <p class="text-sm font-bold text-center mb-2 text-teal-700">Contoh 2: Makanan (Mie)</p>
+                        <div class="aspect-video bg-gradient-to-b from-orange-100 to-orange-300 rounded border border-gray-300 p-4 flex flex-col relative text-xs">
+                            <div class="mx-auto mb-2"><span class="font-black text-3xl text-red-500 drop-shadow-md" style="font-family: 'Comic Sans MS', cursive, sans-serif;">Mie</span></div>
+                            <div class="flex justify-between px-4 font-semibold text-blue-900">
+                                <ul class="space-y-1">
+                                    <li>+ Indomie goreng telor</li>
+                                    <li>+ Indomie rebus telor</li>
+                                    <li>+ Indomie rebus telor bakso</li>
+                                    <li>+ Bakso</li>
+                                </ul>
+                                <ul class="space-y-1 text-right">
+                                    <li>Rp. 8.500,-</li>
+                                    <li>Rp. 7.500,-</li>
+                                    <li>Rp. 12.500,-</li>
+                                    <li>Rp. 10.000,-</li>
+                                </ul>
+                            </div>
+                            <div class="absolute bottom-3 right-4 flex items-center gap-2 font-bold text-red-800">
+                                Ke Daftar Menu <div class="w-6 h-4 bg-blue-500 rounded border border-blue-700 flex items-center justify-center text-white text-[8px] cursor-pointer">◀</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contoh 3: Makanan (Paket) -->
+                    <div class="border shadow-md rounded-lg p-3 bg-gray-50 flex flex-col transition hover:shadow-lg">
+                        <p class="text-sm font-bold text-center mb-2 text-teal-700">Contoh 3: Makanan (Paket)</p>
+                        <div class="aspect-video bg-gradient-to-br from-yellow-50 to-yellow-200 rounded border border-gray-300 p-3 flex flex-col relative text-[9px] leading-tight">
+                            <div class="mx-auto bg-blue-500 text-white px-6 py-1 rounded-t-lg rounded-br-lg transform -rotate-2 mb-2 shadow"><span class="font-bold text-sm tracking-widest">Paket</span></div>
+                            <div class="flex justify-between px-2 font-semibold text-gray-800 w-full">
+                                <ul class="space-y-1 w-3/4 pr-2">
+                                    <li>A. Ayam goreng, sayur bening, tempe goreng, sambal + nasi</li>
+                                    <li>B. Sayur asem, ikan mas goreng, tahu goreng, sambal + nasi</li>
+                                    <li>C. Sayur lodeh, empal, bakwan, sambal + Nasi</li>
+                                    <li>D. Gulai ikan mas, tahu/tempe goreng, Sambal / lalap + nasi</li>
+                                </ul>
+                                <ul class="space-y-1 text-right w-1/4">
+                                    <li>Rp. 17.000,-</li>
+                                    <li>Rp. 18.000,-</li>
+                                    <li>Rp. 20.000,-</li>
+                                    <li>Rp. 20.000,-</li>
+                                </ul>
+                            </div>
+                            <div class="absolute bottom-2 right-4 flex items-center gap-2 font-bold text-gray-800">
+                                Ke Daftar Menu <div class="w-6 h-4 bg-blue-500 rounded border border-blue-700 flex items-center justify-center text-white text-[8px] cursor-pointer">◀</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contoh 4: Minuman (Juice) -->
+                    <div class="border shadow-md rounded-lg p-3 bg-gray-50 flex flex-col transition hover:shadow-lg">
+                        <p class="text-sm font-bold text-center mb-2 text-teal-700">Contoh 4: Minuman (Juice)</p>
+                        <div class="aspect-video bg-gradient-to-b from-blue-100 to-blue-300 rounded border border-gray-300 p-4 flex flex-col relative text-xs">
+                            <div class="mx-auto mb-2"><span class="font-bold text-3xl text-blue-800 drop-shadow-md">Juice</span></div>
+                            <div class="flex justify-between px-8 font-bold text-pink-800">
+                                <ul class="space-y-1 list-disc list-inside">
+                                    <li><span class="text-gray-800">Mangga</span></li>
+                                    <li><span class="text-gray-800">Tomat</span></li>
+                                    <li><span class="text-gray-800">Pir</span></li>
+                                    <li><span class="text-gray-800">Apel</span></li>
+                                    <li><span class="text-gray-800">Alpukat</span></li>
+                                </ul>
+                                <ul class="space-y-1 text-right text-gray-800">
+                                    <li>Rp. 12.000,-</li>
+                                    <li>Rp. 8.000,-</li>
+                                    <li>Rp. 10.000,-</li>
+                                    <li>Rp. 10.000,-</li>
+                                    <li>Rp. 12.000,-</li>
+                                </ul>
+                            </div>
+                            <div class="absolute bottom-3 right-4 flex items-center gap-2 font-bold text-gray-800">
+                                Ke Daftar Menu <div class="w-6 h-4 bg-blue-500 rounded border border-blue-700 flex items-center justify-center text-white text-[8px] cursor-pointer">◀</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contoh 5: Minuman Dingin -->
+                    <div class="border shadow-md rounded-lg p-3 bg-gray-50 flex flex-col transition hover:shadow-lg">
+                        <p class="text-sm font-bold text-center mb-2 text-teal-700">Contoh 5: Minuman Dingin</p>
+                        <div class="aspect-video bg-gradient-to-br from-purple-500 via-yellow-400 to-blue-600 rounded border border-gray-300 p-3 flex flex-col relative text-[9px]">
+                            <div class="absolute top-3 right-6 bg-blue-400/90 text-white px-4 py-1.5 rounded shadow-lg transform rotate-3"><span class="font-bold text-sm">Minuman Dingin</span></div>
+                            <div class="flex justify-between mt-8 px-2 font-bold text-gray-900 drop-shadow-sm w-1/2">
+                                <ul class="space-y-0.5">
+                                    <li>+ Coca Cola</li>
+                                    <li>+ Fanta</li>
+                                    <li>+ Sprite</li>
+                                    <li>+ Teh botol</li>
+                                    <li>+ Aqua gelas</li>
+                                    <li>+ Es teh manis</li>
+                                </ul>
+                                <ul class="space-y-0.5 text-right ml-4">
+                                    <li>Rp. 6.000,-</li>
+                                    <li>Rp. 6.000,-</li>
+                                    <li>Rp. 6.000,-</li>
+                                    <li>Rp. 5.000,-</li>
+                                    <li>Rp. 1.000,-</li>
+                                    <li>Rp. 4.000,-</li>
+                                </ul>
+                            </div>
+                            <div class="absolute bottom-2 right-4 flex items-center gap-2 font-bold text-gray-900">
+                                Ke Daftar Menu <div class="w-6 h-4 bg-blue-300 rounded border border-blue-500 flex items-center justify-center text-white text-[8px] cursor-pointer">◀</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contoh 6: Minuman Panas -->
+                    <div class="border shadow-md rounded-lg p-3 bg-gray-50 flex flex-col transition hover:shadow-lg">
+                        <p class="text-sm font-bold text-center mb-2 text-teal-700">Contoh 6: Minuman Panas</p>
+                        <div class="aspect-video bg-gradient-to-r from-green-700 via-green-200 to-green-700 rounded border border-gray-300 p-4 flex flex-col relative text-xs shadow-inner">
+                            <div class="mx-auto bg-green-300 px-6 py-3 rounded-[50%] border-2 border-green-600 shadow-md mb-2 flex items-center justify-center text-center leading-tight">
+                                <span class="font-bold text-sm text-gray-800">Minuman<br>Panas</span>
+                            </div>
+                            <div class="flex justify-between px-8 font-semibold text-gray-900 drop-shadow-sm">
+                                <ul class="space-y-2 text-red-600">
+                                    <li>❖ <span class="text-gray-900">Kopi</span></li>
+                                    <li>❖ <span class="text-gray-900">Kopi susu</span></li>
+                                    <li>❖ <span class="text-gray-900">Teh manis</span></li>
+                                    <li>❖ <span class="text-gray-900">Jeruk</span></li>
+                                </ul>
+                                <ul class="space-y-2 text-right">
+                                    <li>Rp. 6.000,-</li>
+                                    <li>Rp. 7.500,-</li>
+                                    <li>Rp. 3.000,-</li>
+                                    <li>Rp. 4.000,-</li>
+                                </ul>
+                            </div>
+                            <div class="absolute bottom-3 right-4 flex items-center gap-2 font-bold text-yellow-400 drop-shadow-md">
+                                Ke Daftar Menu <div class="w-6 h-4 bg-blue-500 rounded border border-blue-700 flex items-center justify-center text-white text-[8px] cursor-pointer">◀</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-orange-50 border-l-4 border-orange-500 p-4 mb-6 rounded-r-lg">
+                    <p class="font-semibold text-orange-800 mb-2">Tugas Interaktif:</p>
+                    <p class="text-sm text-orange-700 mb-3">Dari pertanyaan di atas, apakah kalian mengalami kesulitan? Tuliskan satu hal yang kalian rasakan dalam bentuk pertanyaan!</p>
+                    <textarea id="input_pertanyaan" class="w-full p-3 border border-orange-200 rounded-lg focus:ring-orange-500" rows="3" placeholder="Ketik pertanyaan kalian di sini..."></textarea>
+                </div>
+
+                <div class="flex justify-between mt-8">
+                    <button onclick="goToStep(0)" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-6 rounded-lg transition">Kembali</button>
+                    <button onclick="goToStep(2)" class="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-6 rounded-lg transition">Lanjut ke Tahap 2 & 3</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAHAP 2 & 3 -->
+        <section id="step-2" class="step-content">
+            <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+                <div class="flex items-center gap-3 mb-6 border-b pb-4">
+                    <span class="bg-teal-100 text-teal-800 text-xl font-bold px-4 py-2 rounded-lg">B.2 & B.3</span>
+                    <h2 class="text-2xl font-bold text-gray-800">Perencanaan & Jadwal</h2>
+                </div>
+
+                <!-- Pembentukan Kelompok -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-bold text-teal-700 mb-3">1. Pembentukan Kelompok</h3>
+                    <p class="text-sm mb-4">Bentuk kelompok (3-4 anak). Isikan data kelompok kalian:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-gray-50 p-4 rounded-lg border">
+                        <div>
+                            <label class="block text-sm font-semibold mb-1">Nama Kelompok</label>
+                            <input type="text" id="input_kelompok" class="w-full p-2 border rounded" placeholder="Contoh: Kelompok Hebat">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-1">Ketua Kelompok</label>
+                            <input type="text" id="input_ketua" class="w-full p-2 border rounded" placeholder="Nama Ketua">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-semibold mb-1">Anggota Kelompok</label>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+                                <input type="text" class="w-full p-2 border rounded" placeholder="Anggota 1">
+                                <input type="text" class="w-full p-2 border rounded" placeholder="Anggota 2">
+                                <input type="text" class="w-full p-2 border rounded" placeholder="Anggota 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kumpulan Informasi -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-bold text-teal-700 mb-3">2. Kumpulan Informasi (Tabel 2.5)</h3>
+                    <p class="text-sm mb-2">Kumpulkan informasi tentang Microsoft PowerPoint dalam Hyperlink. Kalian bisa membaca materi dari modul atau scan barcode.</p>
+                    <div class="table-container border rounded-lg overflow-hidden">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-teal-50">
+                                    <th class="p-3 border-b border-r font-semibold">Informasi tentang PPT Hyperlink</th>
+                                    <th class="p-3 border-b w-1/3 font-semibold">Sumber</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-0 border-b border-r"><textarea class="w-full h-full min-h-[60px] p-2 border-0 resize-none" placeholder="Ketik informasi..."></textarea></td>
+                                    <td class="p-0 border-b"><textarea class="w-full h-full min-h-[60px] p-2 border-0 resize-none" placeholder="Ketik sumber..."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-0 border-b border-r"><textarea class="w-full h-full min-h-[60px] p-2 border-0 resize-none" placeholder="Ketik informasi..."></textarea></td>
+                                    <td class="p-0 border-b"><textarea class="w-full h-full min-h-[60px] p-2 border-0 resize-none" placeholder="Ketik sumber..."></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Jadwal Pembuatan -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-bold text-teal-700 mb-3">3. Menyusun Jadwal (Tabel 2.6)</h3>
+                    <div class="table-container border rounded-lg overflow-hidden">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-teal-50">
+                                    <th class="p-3 border-b border-r font-semibold w-1/4">Jadwal</th>
+                                    <th class="p-3 border-b border-r font-semibold w-1/4">Waktu Kegiatan</th>
+                                    <th class="p-3 border-b font-semibold">Rencana Kegiatan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-3 border-b border-r bg-gray-50 font-medium">Perancangan proyek</td>
+                                    <td class="p-0 border-b border-r"><input type="text" class="w-full h-full p-3 border-0" placeholder="Cth: 10 Okt"></td>
+                                    <td class="p-0 border-b"><textarea class="w-full h-full min-h-[40px] p-2 border-0 resize-none" placeholder="Ketik rencana..."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border-b border-r bg-gray-50 font-medium">Tugas proyek di sekolah</td>
+                                    <td class="p-0 border-b border-r"><input type="text" class="w-full h-full p-3 border-0" placeholder="Cth: 12 Okt"></td>
+                                    <td class="p-0 border-b"><textarea class="w-full h-full min-h-[40px] p-2 border-0 resize-none" placeholder="Ketik rencana..."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border-b border-r bg-gray-50 font-medium">Pelaporan proyek</td>
+                                    <td class="p-0 border-b border-r"><input type="text" class="w-full h-full p-3 border-0" placeholder="Cth: 15 Okt"></td>
+                                    <td class="p-0 border-b"><textarea class="w-full h-full min-h-[40px] p-2 border-0 resize-none" placeholder="Ketik rencana..."></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="flex justify-between mt-8">
+                    <button onclick="goToStep(1)" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-6 rounded-lg transition">Kembali</button>
+                    <button onclick="goToStep(3)" class="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-6 rounded-lg transition">Lanjut ke Tahap 4</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAHAP 4 -->
+        <section id="step-3" class="step-content">
+            <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+                <div class="flex items-center gap-3 mb-6 border-b pb-4">
+                    <span class="bg-teal-100 text-teal-800 text-xl font-bold px-4 py-2 rounded-lg">B.4</span>
+                    <h2 class="text-2xl font-bold text-gray-800">Pelaksanaan & Monitor Proyek</h2>
+                </div>
+
+                <!-- Pembagian Tugas -->
+                <div class="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-8">
+                    <h3 class="font-bold text-blue-800 mb-3 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                        </svg>
+                        Instruksi Pembagian Tugas
+                    </h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-1 ml-2">
+                        <li><strong>Ketua:</strong> Membuat Contoh 1 dan 2 (Simpan: <em>"Hyperlink Contoh 1 dan 2 Kelompok..."</em>)</li>
+                        <li><strong>Anggota 1:</strong> Membuat Contoh 3 dan 4 (Simpan: <em>"Hyperlink Contoh 3 dan 4 Kelompok..."</em>)</li>
+                        <li><strong>Anggota 2:</strong> Membuat Contoh 5 (Simpan: <em>"Hyperlink Contoh 5 Kelompok..."</em>)</li>
+                        <li><strong>Anggota 3:</strong> Membuat Contoh 6 (Simpan: <em>"Hyperlink Contoh 6 Kelompok..."</em>)</li>
+                    </ul>
+                </div>
+
+                <!-- MODUL PANDUAN FITUR PPT (New Requirement) -->
+                <div class="bg-gray-800 text-white rounded-xl p-6 mb-8 shadow-inner">
+                    <h3 class="text-xl font-bold text-yellow-400 mb-4 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                        Panduan Detail Fitur PowerPoint
+                    </h3>
+                    <p class="text-sm text-gray-300 mb-6">Berikut adalah detail langkah dan contoh hasil dari fitur-fitur yang wajib kalian gunakan dalam membuat Daftar Menu Interaktif.</p>
+                    
+                    <div class="space-y-6">
+                        <!-- Fitur 1: Gradient Background -->
+                        <div class="bg-gray-700 rounded-lg p-5 flex flex-col md:flex-row gap-6 items-center shadow-md">
+                            <div class="flex-1">
+                                <h4 class="text-lg font-bold text-teal-300 mb-2">1. Latar Belakang Gradasi (Gradient Background)</h4>
+                                <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
+                                    <li>Klik Kanan pada area slide yang kosong.</li>
+                                    <li>Pilih menu <strong>Format Background...</strong> di bagian paling bawah.</li>
+                                    <li>Pada panel sebelah kanan, pilih opsi <strong>Gradient fill</strong>.</li>
+                                    <li>Pilih jenis gradasi di bagian <em>Type</em> (Linear, Radial, dll).</li>
+                                    <li>Atur titik warna pada <strong>Gradient stops</strong>. Kalian bisa menambah, menghapus, dan mengubah warna pada setiap titik agar menjadi warna-warni (misal: Biru ke Kuning ke Pink).</li>
+                                </ul>
+                            </div>
+                            <div class="w-full md:w-1/3 aspect-video bg-gradient-to-r from-blue-500 via-yellow-300 to-pink-500 rounded-lg border-2 border-gray-400 flex items-center justify-center shadow-lg relative overflow-hidden">
+                                <div class="absolute inset-0 bg-white/10"></div>
+                                <span class="text-white font-bold bg-black/60 px-3 py-1 rounded text-xs z-10 backdrop-blur-sm">Contoh Gradient Fill</span>
+                            </div>
+                        </div>
+
+                        <!-- Fitur 2: WordArt -->
+                        <div class="bg-gray-700 rounded-lg p-5 flex flex-col md:flex-row gap-6 items-center shadow-md">
+                            <div class="flex-1">
+                                <h4 class="text-lg font-bold text-teal-300 mb-2">2. Teks Judul Keren (WordArt & Text Effects)</h4>
+                                <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
+                                    <li>Pergi ke tab menu <strong>Insert</strong>.</li>
+                                    <li>Cari dan klik ikon <strong>WordArt</strong> (ikon huruf A miring).</li>
+                                    <li>Pilih gaya desain huruf yang disukai, lalu ketik teks (misal: "DAFTAR MENU").</li>
+                                    <li>Untuk memberikan efek khusus, klik teks tersebut lalu pergi ke tab <strong>Shape Format</strong>.</li>
+                                    <li>Pilih <strong>Text Effects</strong> untuk memberi bayangan (<em>Shadow</em>), efek bercahaya (<em>Glow</em>), atau mengubah bentuk teks melengkung (<em>Transform</em>).</li>
+                                </ul>
+                            </div>
+                            <div class="w-full md:w-1/3 aspect-video bg-gray-200 rounded-lg border-2 border-gray-400 flex items-center justify-center shadow-lg">
+                                <span class="font-black text-2xl text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-yellow-500 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] tracking-widest p-2 border-4 border-double border-pink-400">DAFTAR MENU</span>
+                            </div>
+                        </div>
+
+                        <!-- Fitur 3: Shapes -->
+                        <div class="bg-gray-700 rounded-lg p-5 flex flex-col md:flex-row gap-6 items-center shadow-md">
+                            <div class="flex-1">
+                                <h4 class="text-lg font-bold text-teal-300 mb-2">3. Membuat Tombol Menu (Shapes)</h4>
+                                <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
+                                    <li>Pergi ke tab menu <strong>Insert</strong>, klik <strong>Shapes</strong>.</li>
+                                    <li>Pilih bentuk yang diinginkan (misal: Persegi panjang berujung membulat, atau panah).</li>
+                                    <li>Klik dan seret (drag) kursor di atas slide untuk menggambar bentuknya.</li>
+                                    <li>Ubah warna di tab <em>Shape Format</em> -> <strong>Shape Fill</strong> (warna dalam) dan <strong>Shape Outline</strong> (garis luar).</li>
+                                    <li>Untuk menulis di dalamnya, cukup klik kanan pada bangun tersebut lalu pilih <strong>Edit Text</strong> (atau langsung ketik).</li>
+                                </ul>
+                            </div>
+                            <div class="w-full md:w-1/3 aspect-video bg-gray-100 rounded-lg border-2 border-gray-400 flex flex-col items-center justify-center gap-3 shadow-lg p-2">
+                                <div class="bg-blue-600 text-white font-bold px-6 py-2 rounded-lg border-2 border-blue-800 shadow-[0_4px_0_rgba(30,58,138,1)] transform hover:translate-y-1 hover:shadow-none transition cursor-pointer text-sm">
+                                    Tombol Menu
+                                </div>
+                                <div class="w-10 h-6 bg-blue-500 rounded border border-blue-700 flex items-center justify-center text-white text-xs cursor-pointer shadow-md">◀</div>
+                            </div>
+                        </div>
+
+                        <!-- Fitur 4 (INTI): Hyperlink -->
+                        <div class="bg-teal-900 border-2 border-teal-500 rounded-lg p-5 flex flex-col md:flex-row gap-6 items-center shadow-lg relative overflow-hidden">
+                            <div class="absolute -right-10 -top-10 w-32 h-32 bg-teal-500 rounded-full opacity-20 blur-2xl"></div>
+                            <div class="flex-1 z-10">
+                                <h4 class="text-xl font-bold text-yellow-300 mb-2">4. Menghubungkan Slide (HYPERLINK) - Fitur Inti</h4>
+                                <ol class="list-decimal list-inside text-sm text-gray-200 space-y-1.5 font-medium">
+                                    <li>Klik pada objek (gambar, teks, atau <em>Shape</em>) yang akan dijadikan tombol.</li>
+                                    <li>Klik Kanan pada objek tersebut, lalu pilih menu <strong>Hyperlink</strong> (atau <em>Link</em>).</li>
+                                    <li>Pada kotak dialog yang muncul, perhatikan panel di sebelah kiri, lalu klik <strong>Place in This Document</strong>.</li>
+                                    <li>Di bagian tengah, daftar slide kalian akan muncul. <strong>Pilih slide yang ingin dituju</strong> (Misal: Slide 2 - Minuman).</li>
+                                    <li>Klik <strong>OK</strong>.</li>
+                                </ol>
+                                <p class="text-xs text-yellow-200 mt-3 italic border-l-2 border-yellow-400 pl-2">Catatan: Tombol Hyperlink baru bisa ditekan/berfungsi ketika PPT sedang dijalankan dalam mode <strong>Slide Show (F5)</strong>. Kursor akan berubah menjadi gambar tangan (👆) saat menyentuh tombol.</p>
+                            </div>
+                            <div class="w-full md:w-1/3 aspect-video bg-white rounded-lg flex items-center justify-center p-3 relative z-10">
+                                <!-- Animasi Simulasi Hyperlink -->
+                                <div class="text-center group">
+                                    <div class="bg-gray-800 text-white text-xs p-2 mb-2 rounded opacity-0 group-hover:opacity-100 transition duration-300 absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap">Berpindah ke Slide 2!</div>
+                                    <div class="bg-gradient-to-b from-blue-400 to-blue-600 text-white font-bold px-4 py-2 rounded-lg cursor-pointer flex items-center gap-2 shadow-lg group-hover:ring-4 group-hover:ring-blue-300 transition-all duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                                        </svg>
+                                        Klik Saya (Hyperlink)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabel Langkah Kerja -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-bold text-teal-700 mb-3">Tabel 2.7. Langkah-langkah Pengetikan Daftar Menu</h3>
+                    <div class="table-container border rounded-lg overflow-hidden">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-teal-50">
+                                    <th class="p-3 border-b border-r font-semibold w-12 text-center">No</th>
+                                    <th class="p-3 border-b border-r font-semibold w-1/4">Pengetikan</th>
+                                    <th class="p-3 border-b border-r font-semibold">Langkah / Hal yang Diperlukan</th>
+                                    <th class="p-3 border-b font-semibold">Hasil yang Diinginkan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Looping for rows 1 to 6 -->
+                                <tr>
+                                    <td class="p-3 border-b border-r text-center font-bold">1</td>
+                                    <td class="p-3 border-b border-r bg-gray-50">Contoh 1</td>
+                                    <td class="p-0 border-b border-r"><textarea class="w-full h-full min-h-[50px] p-2 border-0 resize-none" placeholder="Ketik langkah..."></textarea></td>
+                                    <td class="p-0 border-b"><textarea class="w-full h-full min-h-[50px] p-2 border-0 resize-none" placeholder="Ketik hasil..."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border-b border-r text-center font-bold">2</td>
+                                    <td class="p-3 border-b border-r bg-gray-50">Contoh 2</td>
+                                    <td class="p-0 border-b border-r"><textarea class="w-full h-full min-h-[50px] p-2 border-0 resize-none" placeholder="Ketik langkah..."></textarea></td>
+                                    <td class="p-0 border-b"><textarea class="w-full h-full min-h-[50px] p-2 border-0 resize-none" placeholder="Ketik hasil..."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border-b border-r text-center font-bold">3</td>
+                                    <td class="p-3 border-b border-r bg-gray-50">Contoh 3</td>
+                                    <td class="p-0 border-b border-r"><textarea class="w-full h-full min-h-[50px] p-2 border-0 resize-none" placeholder="Ketik langkah..."></textarea></td>
+                                    <td class="p-0 border-b"><textarea class="w-full h-full min-h-[50px] p-2 border-0 resize-none" placeholder="Ketik hasil..."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border-b border-r text-center font-bold">4</td>
+                                    <td class="p-3 border-b border-r bg-gray-50">Contoh 4</td>
+                                    <td class="p-0 border-b border-r"><textarea class="w-full h-full min-h-[50px] p-2 border-0 resize-none" placeholder="Ketik langkah..."></textarea></td>
+                                    <td class="p-0 border-b"><textarea class="w-full h-full min-h-[50px] p-2 border-0 resize-none" placeholder="Ketik hasil..."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border-b border-r text-center font-bold">5</td>
+                                    <td class="p-3 border-b border-r bg-gray-50">Contoh 5</td>
+                                    <td class="p-0 border-b border-r"><textarea class="w-full h-full min-h-[50px] p-2 border-0 resize-none" placeholder="Ketik langkah..."></textarea></td>
+                                    <td class="p-0 border-b"><textarea class="w-full h-full min-h-[50px] p-2 border-0 resize-none" placeholder="Ketik hasil..."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border-b border-r text-center font-bold">6</td>
+                                    <td class="p-3 border-b border-r bg-gray-50">Contoh 6</td>
+                                    <td class="p-0 border-b border-r"><textarea class="w-full h-full min-h-[50px] p-2 border-0 resize-none" placeholder="Ketik langkah..."></textarea></td>
+                                    <td class="p-0 border-b"><textarea class="w-full h-full min-h-[50px] p-2 border-0 resize-none" placeholder="Ketik hasil..."></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="bg-green-100 border border-green-300 text-green-800 p-4 rounded-lg text-center mb-6">
+                    <h4 class="font-bold mb-1">Kerjakan di Aplikasi PowerPoint!</h4>
+                    <p class="text-sm">Setelah mengisi tabel di atas, pastikan kalian praktik langsung di PowerPoint sesuai tugas masing-masing dan satukan menjadi satu file interaktif menggunakan Hyperlink.</p>
+                </div>
+
+                <div class="flex justify-between mt-8">
+                    <button onclick="goToStep(2)" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-6 rounded-lg transition">Kembali</button>
+                    <button onclick="goToStep(4)" class="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-6 rounded-lg transition">Lanjut ke Tahap 5 & 6</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAHAP 5 & 6 -->
+        <section id="step-4" class="step-content">
+            <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+                
+                <!-- B.5 Menguji Hasil -->
+                <div class="flex items-center gap-3 mb-6 border-b pb-4">
+                    <span class="bg-teal-100 text-teal-800 text-xl font-bold px-4 py-2 rounded-lg">B.5</span>
+                    <h2 class="text-2xl font-bold text-gray-800">Menguji Hasil (Sintaks 5)</h2>
+                </div>
+                
+                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-6 mb-8 text-center shadow-sm">
+                    <div class="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">Saatnya Presentasi!</h3>
+                    <p class="text-gray-700 mb-4 max-w-2xl mx-auto">
+                        <strong>Hal-hal yang harus kalian lakukan:</strong><br>
+                        Mengkomunikasikan atau menyampaikan hasil proyek tentang <em>Microsoft PowerPoint</em> dalam hal <strong>hyperlink</strong> sesuai rancangan bersama kelompok dengan cara presentasi dan demonstrasi di depan kelas (menggunakan Aplikasi Microsoft PowerPoint).
+                    </p>
+                    <div class="inline-block bg-yellow-100 text-yellow-800 font-semibold px-4 py-2 rounded-full text-sm border border-yellow-300">
+                        💡 Siap menjawab pertanyaan dari forum atau guru!
+                    </div>
+                </div>
+
+                <!-- B.6 Evaluasi Pengalaman Belajar -->
+                <div class="flex items-center gap-3 mb-6 border-b pb-4">
+                    <span class="bg-teal-100 text-teal-800 text-xl font-bold px-4 py-2 rounded-lg">B.6</span>
+                    <h2 class="text-2xl font-bold text-gray-800">Evaluasi Pengalaman (Sintaks 6)</h2>
+                </div>
+
+                <div class="mb-8">
+                    <p class="mb-4 text-gray-700">Setelah menyelesaikan proyek pembuatan Daftar Menu Interaktif, mari kita refleksikan pengalaman belajar kalian hari ini.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 p-4 rounded-lg border">
+                            <label class="block font-semibold text-gray-800 mb-2">1. Apa bagian paling menyenangkan saat membuat proyek presentasi ini?</label>
+                            <textarea id="input_refleksi" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-teal-500" rows="2" placeholder="Ceritakan pengalamanmu..."></textarea>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border">
+                            <label class="block font-semibold text-gray-800 mb-2">2. Apakah fitur Hyperlink membantu membuat presentasi menjadi lebih menarik? Mengapa?</label>
+                            <textarea class="w-full p-3 border border-gray-300 rounded-lg focus:ring-teal-500" rows="2" placeholder="Tuliskan pendapatmu..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between mt-8">
+                    <button onclick="goToStep(3)" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-6 rounded-lg transition">Kembali</button>
+                    <button onclick="finishProject()" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition hover:scale-105 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                        </svg>
+                        Selesai & Kumpulkan Proyek
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <script>
+        // Array of titles for the navigation indicator
+        const stepTitles = [
+            "Beranda", 
+            "Tahap 1: Pertanyaan Mendasar", 
+            "Tahap 2 & 3: Perencanaan & Jadwal", 
+            "Tahap 4: Pelaksanaan Proyek",
+            "Tahap 5 & 6: Uji Hasil & Evaluasi"
+        ];
+
+        // Function to handle step navigation
+        function goToStep(stepIndex) {
+            // Hide all steps
+            const steps = document.querySelectorAll('.step-content');
+            steps.forEach(step => {
+                step.classList.remove('active');
+            });
+
+            // Show target step
+            const targetStep = document.getElementById(`step-${stepIndex}`);
+            if (targetStep) {
+                targetStep.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                // Update navigation indicator
+                document.getElementById('progress-indicator').innerText = stepTitles[stepIndex];
+            }
+        }
+
+        // Function to handle finish button
+        async function finishProject() {
+            // 1. Kumpulkan data dari input
+            const namaKelompok = document.getElementById('input_kelompok').value || '-';
+            const ketuaKelompok = document.getElementById('input_ketua').value || '-';
+            const pertanyaan = document.getElementById('input_pertanyaan').value || '-';
+            const refleksi = document.getElementById('input_refleksi').value || '-';
+
+            // 2. Siapkan Data JSON
+            const dataToSave = {
+                namaKelompok: namaKelompok,
+                ketuaKelompok: ketuaKelompok,
+                pertanyaanMendasar: pertanyaan,
+                refleksi: refleksi
+            };
+
+            // Menampilkan loading modal
+            document.body.insertAdjacentHTML('beforeend', `
+                <div id="loadingModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                    <div class="bg-white p-6 rounded-lg text-center">
+                        <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-teal-600 mx-auto mb-3"></div>
+                        <p class="text-gray-700">Menyimpan data ke server...</p>
+                    </div>
+                </div>
+            `);
+
+            try {
+                // === MASUKKAN URL WEB APP GOOGLE SCRIPT ANDA DI SINI ===
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbxxfrBVlJrKfW6Bdc195biu5EaRhWlq9SJ8ql_-yI5Vnuk4Im76zy1YYntJqkgdLwd2/exec'; 
+                // ========================================================
+
+                // 3. Kirim data ke Google Sheets (Langsung fetch tanpa IF)
+                const response = await fetch(scriptURL, {
+                    method: 'POST',
+                    body: JSON.stringify(dataToSave),
+                    headers: {
+                        'Content-Type': 'text/plain;charset=utf-8', 
+                    }
+                });
+
+                // Hapus loading modal
+                document.getElementById('loadingModal').remove();
+
+                // Tampilkan sukses modal
+                const modalHTML = `
+                    <div id="customModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                        <div class="bg-white rounded-xl shadow-2xl p-8 max-w-sm w-full text-center transform transition-all scale-100">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Kerja Bagus!</h3>
+                            <p class="text-gray-600 text-sm mb-6">Data kalian berhasil dikirim ke guru. Jangan lupa persiapkan presentasi produk kalian ya!</p>
+                            <button onclick="closeModal()" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition">OK, Mengerti</button>
+                        </div>
+                    </div>
+                `;
+                document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+            } catch (error) {
+                document.getElementById('loadingModal').remove();
+                alert('Gagal menyimpan data. Pastikan koneksi internet aktif.');
+                console.error('Error!', error.message);
+            }
+        }
+
+        // Function to close the custom modal
+        function closeModal() {
+            const modal = document.getElementById('customModal');
+            if (modal) {
+                modal.remove();
+                goToStep(0); // Return to home
+            }
+        }
+    </script>
+</body>
+</html>
